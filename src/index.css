@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "BYekanPlus";
+  src: url("public/Fonts/B-Yekan-Plus-Font/B Yekan Plus Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "BYekanPlus", sans-serif;
+}
