@@ -11,3 +11,84 @@
 body {
   font-family: "BYekanPlus", sans-serif;
 }
+
+
+@keyframes modalBackdropIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalContentIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[modalBackdropIn_350ms_ease-out_both\],
+  .animate-\[modalIn_500ms_cubic-bezier\(0\.16\2c 1\2c 0\.3\2c 1\)_both\],
+  .animate-\[modalContentIn_650ms_ease-out_100ms_both\],
+  .animate-\[modalImageIn_700ms_cubic-bezier\(0\.16\2c 1\2c 0\.3\2c 1\)_120ms_both\] {
+    animation: none !important;
+  }
+}
+
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

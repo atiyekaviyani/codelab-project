@@ -2,9 +2,10 @@ import Layout from "../App/Layout";
 import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "../Screens/LandingPage";
 import CoursePage from"../Screens/CoursePage";
-import DetailCoursePage from "../Screens/DetailCoursePage"
-import Article from "../Screens/ArticlePage"
-import DetailArticlePage from "../Screens/DetailArticlePage"
+import DetailCoursePage from "../Screens/DetailCoursePage";
+import Article from "../Screens/ArticlePage";
+import DetailArticlePage from "../Screens/DetailArticlePage";
+import TeachersPage from "../Screens/TeachersPage";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ export const Routers = createBrowserRouter([
        {
         path: "/DetailArticle",
         element: < DetailArticlePage/>,
+      },
+      {
+        path: "/Teachers",
+        element: < TeachersPage/>,
       },
     ],
   },
